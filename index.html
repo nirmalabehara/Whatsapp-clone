@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>WhatsApp Dairy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div id="header">
+                <div class="profile">
+                    <img src="iconone.webp" alt="Profile Picture" class="profile-pic">
+                </div>
+                <div class="icons">
+                    <span class="add-contact">➕</span>
+                    <span id="settings-icon" style="cursor: pointer;">⚙️</span>
+                    <div id="settings-menu" style="display: none; position: absolute; background: white; padding: 10px; border: 1px solid #ccc;">
+                        <button id="theme-toggle">Toggle Theme</button>
+                    </div>
+                </div>
+            </div>
+            <input type="text" placeholder="Search or start a new chat" id="search-box">
+            <div id="contacts"></div>
+        </div>
+
+        <!-- Chat Section -->
+        <div id="chat-section">
+            <div id="chat-header">
+                <div class="contact-profile">
+                    <div class="avatar">
+                        <img id="chat-profile-pic" src="profile.jpg" alt="Profile Picture">
+                    </div>
+                    <div>
+                        <h4 id="chat-contact-name">Select a contact</h4>
+                        <p id="last-seen">Last seen: Never</p>
+                    </div>
+                </div>
+                <div class="header-icons">
+                    <span id="call-icon">📞</span>
+                    <span>🔍</span>
+                </div>
+            </div>
+            <div id="chat-messages"></div>
+            <div id="chat-input">
+                <button id="emoji-btn">😊</button>
+                <button>
+                <label for="file-input">
+                    <span>📸</span> <!-- Camera icon or any other icon -->
+                </label></button>
+                <div id="emoji-picker" style="display: none; position: absolute; bottom: 60px; left: 20px; background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                    <!-- Emoji Grid will be populated here dynamically -->
+                </div>
+                <input type="text" placeholder="Type a message" id="message-input">
+                <button id="send-button">Send</button>
+                <!-- Add this inside the #chat-input div -->
+                <input type="file" id="file-input" accept="image/*,video/*" style="display:none;">
+                <div id="emoji-picker">
+                    <!-- WhatsApp-like emoji list -->
+                    <span class="emoji">😊</span>
+                    <span class="emoji">😂</span>
+                    <span class="emoji">❤️</span>
+                    <span class="emoji">😍</span>
+                    <span class="emoji">😭</span>
+                    <span class="emoji">😎</span>
+                    <span class="emoji">🥺</span>
+                    <span class="emoji">🔥</span>
+                    <span class="emoji">💪</span>
+                    <span class="emoji">🙏</span>
+                    <span class="emoji">💀</span>
+                    <span class="emoji">🎉</span>
+                    <span class="emoji">🌹</span>
+                    <span class="emoji">🍕</span>
+                    <span class="emoji">🎂</span>
+                    <span class="emoji">🌈</span>
+                    <span class="emoji">🌟</span>
+                    <span class="emoji">😋</span>
+                    <span class="emoji">💯</span>
+                    <span class="emoji">🤩</span>
+                    <span class="emoji">🤔</span>
+                    <span class="emoji">😱</span>
+                    <span class="emoji">🥳</span>
+                    <span class="emoji">👏</span>
+                    <span class="emoji">🙌</span>
+                </div>
+                
+                
+            </div>
+
+        </div>
+    </div>
+    <div id="call-popup" class="hidden">
+        <div class="popup-content">
+            <h3 id="popup-contact-name"></h3>
+            <p id="popup-contact-phone"></p>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
